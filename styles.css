@@ -132,3 +132,55 @@ fieldset legend {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
+
+/* Efecto Hover para el botón */
+#submit:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Efecto Focus para campos de entrada (accesibilidad) */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #80bdff; /* Borde azul claro al enfocar */
+  outline: 0; /* Quitar el outline por defecto (a veces molesto) */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Añadir un "glow" sutil */
+}
+
+/* --- Reto Adicional: Indicación Visual de Campos Obligatorios/Inválidos --- */
+
+/* Opción 1: Usar el span .required-indicator (ya implementado) */
+
+/* Opción 2: Modificar el borde de los campos requeridos */
+/* input:required, select:required, textarea:required { */
+/* border-left: 4px solid #dc3545; /* Borde izquierdo rojo */
+/* } */
+
+/* Estilo MUY BÁSICO para campos inválidos (Funciona mejor con type="email", "number" con min/max, o pattern) */
+/* CUIDADO: Los campos requeridos vacíos son inválidos al cargar la página */
+input:invalid,
+select:invalid,
+textarea:invalid {
+  /* border-color: #dc3545; /* Borde rojo */
+  /* Evitar aplicarlo si no ha interactuado el usuario es complejo solo con CSS */
+}
+
+/* Podríamos usar :focus:invalid para mostrar el error solo al interactuar */
+input:focus:invalid,
+select:focus:invalid,
+textarea:focus:invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); /* "Glow" rojo */
+}
+
+/* Estilo para campos válidos (opcional) */
+/* input:valid, select:valid, textarea:valid { */
+/* border-color: #28a745; /* Borde verde */
+/* } */
+
+/* input:focus:valid, select:focus:valid, textarea:focus:valid { */
+/* border-color: #28a745; */
+/* box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); /* "Glow" verde */
+/* } */
