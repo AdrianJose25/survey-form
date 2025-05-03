@@ -28,6 +28,7 @@
             id="name"
             name="user_name"
             placeholder="Ingresa tu nombre"
+            pattern="^[A-Za-z]{3,20}$"
             required
           />
           <span>El nombre debe contener entre 3 y 20 caracteres.</span>
@@ -42,6 +43,7 @@
             id="email"
             name="user_email"
             placeholder="tu@email.com"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$"
             required
           />
         </div>
@@ -183,6 +185,21 @@
             maxlength="500"
           ></textarea>
           <span>Tienes un máximo de 500 caracteres disponibles.</span>
+        </div>
+        <div class="form-group">
+          <label class="checkbox-label-confirmation">
+            <input
+              type="checkbox"
+              name="confirmation"
+              value="ok"
+              class="input-checkbox"
+              required
+            />
+            <span id="confirmation-msg"
+              >Confirmo que he revisado mis respuestas antes de enviar el
+              formulario.
+            </span>
+          </label>
         </div>
 
         <div class="form-group">
