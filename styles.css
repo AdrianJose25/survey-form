@@ -29,9 +29,9 @@ body {
 /* Encabezado del formulario */
 .form-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   border-bottom: 1px solid #eee;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 #title {
@@ -43,6 +43,18 @@ body {
 #description {
   font-size: 1em;
   color: #555;
+}
+
+#required-indicator-container {
+  display: flex;
+  text-align: left;
+  margin-top: 20px;
+}
+
+#required-msg {
+  font-size: 0.9em;
+  color: #dc3545; /* Rojo para el mensaje de campos requeridos */
+  font-weight: bold; /* Fuente en negrita */
 }
 
 /* Agrupador de cada pregunta/campo */
@@ -92,6 +104,14 @@ fieldset.form-group {
 
 fieldset legend {
   margin-bottom: 0.8rem; /* Más espacio después de la leyenda */
+}
+
+/* Estilo para los spans del formulario */
+form span:not(.required-indicator) {
+  font-size: 0.85em; /* Tamaño de fuente más pequeño */
+  color: #6c757d; /* Color gris suave */
+  margin-top: 5px; /* Separación del input */
+  display: block; /* Asegura que se muestre en una nueva línea */
 }
 
 /* Estilos para etiquetas de radio/checkbox */

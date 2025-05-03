@@ -13,6 +13,9 @@
         <p id="description">
           ¡Gracias por tomarte el tiempo de completar esta encuesta!.
         </p>
+        <div id="required-indicator-container">
+          <span id="required-msg">(*) requerido</span>
+        </div>
       </header>
 
       <form id="survey-form">
@@ -27,6 +30,7 @@
             placeholder="Ingresa tu nombre"
             required
           />
+          <span>El nombre debe contener entre 3 y 20 caracteres.</span>
         </div>
 
         <div class="form-group">
@@ -52,6 +56,7 @@
             min="10"
             max="99"
           />
+          <span>La edad debe ser entre 10 y 99 años.</span>
         </div>
 
         <div class="form-group">
@@ -177,6 +182,7 @@
             placeholder="Escribe tus comentarios u opiniones aquí..."
             maxlength="500"
           ></textarea>
+          <span>Tienes un máximo de 500 caracteres disponibles.</span>
         </div>
 
         <div class="form-group">
