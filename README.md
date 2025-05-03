@@ -20,3 +20,7 @@ El propósito principal de este proyecto es:
 - **Estilo Personalizado**: Aplicación de estilos únicos para diferenciar el formulario y hacerlo visualmente atractivo.
 
 Este proyecto es ideal para demostrar habilidades en diseño y desarrollo web, así como para recopilar información útil de los usuarios.
+
+## Enlace al proyecto
+
+https://basic-survey-form-html-css.netlify.app/
