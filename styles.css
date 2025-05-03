@@ -1,0 +1,46 @@
+/* Reseteo básico y Fuentes */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px; /* Tamaño base */
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f2f5; /* Fondo suave ligeramente diferente */
+  padding: 20px 0; /* Espacio arriba/abajo */
+}
+
+/* Contenedor principal del formulario */
+.form-container {
+  max-width: 700px; /* Ancho máximo del formulario */
+  margin: 30px auto; /* Centrar horizontalmente */
+  padding: 30px 40px; /* Espacio interno */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado del formulario */
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+#title {
+  font-size: 1.8em;
+  color: #0056b3; /* Un azul para el título */
+  margin-bottom: 0.3em;
+}
+
+#description {
+  font-size: 1em;
+  color: #555;
+}
