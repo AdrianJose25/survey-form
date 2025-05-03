@@ -44,3 +44,91 @@ body {
   font-size: 1em;
   color: #555;
 }
+
+/* Agrupador de cada pregunta/campo */
+.form-group {
+  margin-bottom: 1.5rem; /* Espacio entre cada grupo de pregunta */
+}
+
+/* Estilo de las etiquetas */
+label,
+legend {
+  display: block; /* Hace que la etiqueta ocupe toda la línea */
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Espacio entre etiqueta y campo */
+  color: #333;
+}
+
+/* Estilo base para campos de entrada, select y textarea */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  display: block; /* Ocupan toda la línea */
+  width: 100%; /* Se ajustan al ancho del contenedor */
+  padding: 0.75rem 1rem; /* Espacio interno cómodo */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem; /* Bordes redondeados sutiles */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transición suave para :focus */
+}
+
+/* Ajuste específico para textarea */
+textarea {
+  resize: vertical; /* Permite redimensionar solo verticalmente */
+  min-height: 120px; /* Altura mínima */
+}
+
+/* Estilo para fieldset */
+fieldset.form-group {
+  border: none; /* Quitar borde por defecto del fieldset */
+  padding: 0; /* Quitar padding por defecto */
+}
+
+fieldset legend {
+  margin-bottom: 0.8rem; /* Más espacio después de la leyenda */
+}
+
+/* Estilos para etiquetas de radio/checkbox */
+.radio-label,
+.checkbox-label {
+  display: block; /* Una opción por línea */
+  margin-bottom: 0.5rem;
+  font-weight: normal; /* Peso normal para las opciones */
+  cursor: pointer;
+  position: relative; /* Necesario si se personalizan los inputs */
+  padding-left: 1.5rem; /* Espacio para el input personalizado (si se hace) */
+}
+
+/* Ocultar los inputs originales si los vamos a personalizar */
+/* .input-radio, .input-checkbox { */
+/* opacity: 0; */
+/* position: absolute; */
+/* } */
+
+/* Indicador visual para campos requeridos (simple) */
+.required-indicator {
+  color: #dc3545; /* Rojo */
+  font-weight: bold;
+  margin-left: 0.2em;
+}
+
+/* Estilo del botón de envío */
+#submit {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff; /* Azul */
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
