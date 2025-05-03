@@ -17,6 +17,150 @@
 
       <form id="survey-form">
         <div class="form-group">
+          <label id="name-label" for="name"
+            >Nombre <span class="required-indicator">*</span></label
+          >
+          <input
+            type="text"
+            id="name"
+            name="user_name"
+            placeholder="Ingresa tu nombre"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label id="email-label" for="email"
+            >Correo Electrónico <span class="required-indicator">*</span></label
+          >
+          <input
+            type="email"
+            id="email"
+            name="user_email"
+            placeholder="tu@email.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label id="number-label" for="number">Edad (opcional)</label>
+          <input
+            type="number"
+            id="number"
+            name="user_age"
+            placeholder="Edad"
+            min="10"
+            max="99"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="dropdown"
+            >¿Cuál opción describe mejor tu rol actual?
+            <span class="required-indicator">*</span></label
+          >
+          <select id="dropdown" name="user_role" required>
+            <option disabled selected value="">Selecciona tu rol</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="trabajo_tiempo_completo">
+              Trabajador a Tiempo Completo
+            </option>
+            <option value="trabajo_medio_tiempo">
+              Trabajador a Medio Tiempo
+            </option>
+            <option value="desempleado">Desempleado</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>
+            ¿Recomendarías nuestro servicio a un amigo?
+            <span class="required-indicator">*</span>
+          </legend>
+          <label class="radio-label">
+            <input
+              type="radio"
+              name="recommend"
+              value="definitivamente"
+              class="input-radio"
+              checked
+              required
+            />
+            Definitivamente
+          </label>
+          <label class="radio-label">
+            <input
+              type="radio"
+              name="recommend"
+              value="quizas"
+              class="input-radio"
+            />
+            Quizás
+          </label>
+          <label class="radio-label">
+            <input
+              type="radio"
+              name="recommend"
+              value="no_seguro"
+              class="input-radio"
+            />
+            No estoy seguro
+          </label>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend>
+            ¿Qué te gustaría ver mejorado? (Marca todas las que apliquen)
+          </legend>
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="improvement"
+              value="frontend"
+              class="input-checkbox"
+            />
+            Proyectos Frontend
+          </label>
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="improvement"
+              value="backend"
+              class="input-checkbox"
+            />
+            Proyectos Backend
+          </label>
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="improvement"
+              value="visualizacion"
+              class="input-checkbox"
+            />
+            Visualización de Datos
+          </label>
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="improvement"
+              value="comunidad"
+              class="input-checkbox"
+            />
+            Comunidad
+          </label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="comments">Comentarios adicionales:</label>
+          <textarea
+            id="comments"
+            name="user_comments"
+            placeholder="Escribe tus comentarios aquí..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
           <button type="submit" id="submit">Enviar Encuesta</button>
         </div>
       </form>
