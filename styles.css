@@ -182,3 +182,44 @@ textarea:focus:invalid {
 /* border-color: #28a745; */
 /* box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); /* "Glow" verde */
 /* } */
+
+/* --- Media Queries para Diseño Responsivo --- */
+
+@media (max-width: 768px) {
+  .form-container {
+    margin: 20px auto;
+    padding: 20px; /* Reducir padding en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0; /* Quitar padding del body */
+  }
+
+  .form-container {
+    margin: 0; /* Ocupar todo el ancho */
+    max-width: 100%;
+    padding: 20px 15px; /* Ajustar padding horizontal */
+    border-radius: 0; /* Quitar bordes redondeados */
+    box-shadow: none; /* Quitar sombra */
+    border: none;
+  }
+
+  #title {
+    font-size: 1.5em; /* Reducir más el título */
+  }
+
+  /* Asegurar que los inputs no se desborden (aunque width: 100% debería bastar) */
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 0.95rem; /* Reducir ligeramente fuente si es necesario */
+  }
+
+  .radio-label,
+  .checkbox-label {
+    padding-left: 1.2rem; /* Ajustar padding si se personalizan inputs */
+  }
+}
