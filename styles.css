@@ -4,14 +4,14 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Asegura que el padding y el border no afecten el ancho total */
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y legible */
   font-size: 16px; /* Tamaño base */
-  line-height: 1.6;
-  color: #333;
+  line-height: 1.6; /* Espaciado entre lineas */
+  color: #333; /* Color del texto */
   background-color: #f0f2f5; /* Fondo suave ligeramente diferente */
   padding: 20px 0; /* Espacio arriba/abajo */
 }
@@ -21,38 +21,37 @@ body {
   max-width: 700px; /* Ancho máximo del formulario */
   margin: 30px auto; /* Centrar horizontalmente */
   padding: 30px 40px; /* Espacio interno */
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes ligeramente redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 /* Encabezado del formulario */
 .form-header {
-  text-align: center;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
+  text-align: center; /* Centrar texto */
+  margin-bottom: 10px; /* Espacio debajo del encabezado */
+  padding-bottom: 10px; /* Espacio interno debajo del encabezado */
+  border-bottom: 1px solid #eee; /* Línea divisoria */
 }
 
 #title {
-  font-size: 1.8em;
+  font-size: 1.8em; /* Tamaño del título */
   color: #0056b3; /* Un azul para el título */
-  margin-bottom: 0.3em;
+  margin-bottom: 0.3em; /* Espacio debajo del título*/
 }
 
 #description {
-  font-size: 1em;
-  color: #555;
+  color: #555; /* Color gris suave */
+  margin-bottom: 15px; /* Espacio debajo de la descripción */
 }
 
 #required-indicator-container {
-  display: flex;
-  text-align: left;
-  margin-top: 20px;
+  display: flex; /* Usar flexbox para alinear el texto */
+  text-align: left; /* Alinear texto a la izquierda */
 }
 
 #required-msg {
-  font-size: 0.9em;
+  font-size: 0.8em; /* Tamaño de fuente un poco más pequeño */
   color: #dc3545; /* Rojo para el mensaje de campos requeridos */
   font-weight: bold; /* Fuente en negrita */
 }
@@ -66,9 +65,9 @@ body {
 label,
 legend {
   display: block; /* Hace que la etiqueta ocupe toda la línea */
-  font-weight: bold;
+  font-weight: bold; /* Fuente en negrita */
   margin-bottom: 0.5rem; /* Espacio entre etiqueta y campo */
-  color: #333;
+  color: #333; /* Color del texto */
 }
 
 /* Estilo base para campos de entrada, select y textarea */
@@ -80,14 +79,19 @@ textarea {
   display: block; /* Ocupan toda la línea */
   width: 100%; /* Se ajustan al ancho del contenedor */
   padding: 0.75rem 1rem; /* Espacio interno cómodo */
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
+  font-size: 1rem; /* Tamaño de fuente */
+  line-height: 1.5; /* Espaciado entre líneas */
+  color: #495057; /* Color gris oscuro */
+  background-color: #fff; /* Fondo blanco */
+  background-clip: padding-box; /* Asegura que el fondo no se extienda al borde */
+  border: 1px solid #ced4da; /* Borde gris claro */
   border-radius: 0.25rem; /* Bordes redondeados sutiles */
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transición suave para :focus */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Eliminar las flechas en navegadores basados en WebKit */
 }
 
 /* Ajuste específico para textarea */
@@ -102,69 +106,54 @@ fieldset.form-group {
   padding: 0; /* Quitar padding por defecto */
 }
 
-fieldset legend {
-  margin-bottom: 0.8rem; /* Más espacio después de la leyenda */
-}
-
 /* Estilo para los spans del formulario */
-form span:not(.required-indicator) {
-  font-size: 0.85em; /* Tamaño de fuente más pequeño */
+form span {
+  font-size: 0.8em; /* Tamaño de fuente más pequeño */
   color: #6c757d; /* Color gris suave */
-  margin-top: 5px; /* Separación del input */
-  display: block; /* Asegura que se muestre en una nueva línea */
+  display: inline; /* Asegura que se muestre en una misma línea */
 }
 
 /* Estilos para etiquetas de radio/checkbox */
 .radio-label,
 .checkbox-label {
   display: block; /* Una opción por línea */
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; /* Espaciado entre opciones */
   font-weight: normal; /* Peso normal para las opciones */
-  cursor: pointer;
-  position: relative; /* Necesario si se personalizan los inputs */
-  padding-left: 1.5rem; /* Espacio para el input personalizado (si se hace) */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  padding-left: 1.5rem; /* Espacio entre el box y el icono */
 }
 
 .checkbox-label-confirmation {
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-  position: relative; /* Necesario si se personalizan los inputs */
-  padding-left: 0.5rem; /* Espacio para el input personalizado (si se hace) */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  padding-left: 1rem; /* Espacio entre el box y el icono */
 }
 
 #confirmation-msg {
-  display: inline;
   font-weight: bold; /* Opcional: Hace que el texto se vea más destacado */
-  margin-left: 0.2rem;
+  margin-left: 0.2rem; /* Espacio entre el icono y el texto */
   color: green; /* Cambia el color del texto a verde */
 }
-
-/* Ocultar los inputs originales si los vamos a personalizar */
-/* .input-radio, .input-checkbox { */
-/* opacity: 0; */
-/* position: absolute; */
-/* } */
 
 /* Indicador visual para campos requeridos (simple) */
 .required-indicator {
   color: #dc3545; /* Rojo */
-  font-weight: bold;
-  margin-left: 0.2em;
+  font-weight: bold; /* Fuente en negrita */
+  margin-left: 0.2em; /* Espacio entre el texto y el icono */
 }
 
 /* Estilo del botón de envío */
 #submit {
-  display: block;
-  width: 100%;
-  padding: 0.8rem 1rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: #007bff; /* Azul */
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  display: block; /* Ocupa toda la línea */
+  width: 100%; /* Se ajusta al ancho del contenendor */
+  padding: 0.8rem 1rem; /* Espacio Interno */
+  font-size: 1.1rem; /* Tamaño de fuente */
+  font-weight: bold; /* Fuente en negrita */
+  color: #fff; /* Color del texto */
+  background-color: #007bff; /* Color de fondo Azul */
+  border: none; /* Sin borde */
+  border-radius: 0.25rem; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.2s ease-in-out; /* Transición suave del color de fondo al hacer el hover*/
 }
 
 /* Efecto Hover para el botón */
@@ -183,45 +172,26 @@ textarea:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Añadir un "glow" sutil */
 }
 
-/* --- Reto Adicional: Indicación Visual de Campos Obligatorios/Inválidos --- */
-
-/* Opción 1: Usar el span .required-indicator (ya implementado) */
-
-/* Opción 2: Modificar el borde de los campos requeridos */
-/* input:required, select:required, textarea:required { */
-/* border-left: 4px solid #dc3545; /* Borde izquierdo rojo */
-/* } */
-
-/* Estilo MUY BÁSICO para campos inválidos (Funciona mejor con type="email", "number" con min/max, o pattern) */
-/* CUIDADO: Los campos requeridos vacíos son inválidos al cargar la página */
-/*input:invalid, select:invalid, textarea:invalid {*/
-/* border-color: #dc3545; /* Borde rojo */
-/* Evitar aplicarlo si no ha interactuado el usuario es complejo solo con CSS */
-/*}*/
-
-/* Podríamos usar :focus:invalid para mostrar el error solo al interactuar */
+/* Usar :focus:invalid para mostrar el error solo al interactuar */
 input:focus:invalid,
 select:focus:invalid,
 textarea:focus:invalid {
-  border-color: #dc3545;
+  border-color: #dc3545; /* Borde rojo al enfocar un campo invalido */
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); /* "Glow" rojo */
 }
 
-/* Estilo para campos válidos (opcional) */
-/* input:valid, select:valid, textarea:valid { */
-/* border-color: #28a745; /* Borde verde */
-/* } */
-
-/* input:focus:valid, select:focus:valid, textarea:focus:valid { */
-/* border-color: #28a745; */
-/* box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); /* "Glow" verde */
-/* } */
+input:focus:valid,
+select:focus:valid,
+textarea:focus:valid {
+  border-color: #28a745; /* Borde verde al enfocar un campo valido */
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); /* "Glow" verde */
+}
 
 /* --- Media Queries para Diseño Responsivo --- */
 
 @media (max-width: 768px) {
   .form-container {
-    margin: 20px auto;
+    margin: 20px auto; /* Reducir margen superior/inferior */
     padding: 20px; /* Reducir padding en pantallas medianas */
   }
 }
@@ -233,11 +203,11 @@ textarea:focus:invalid {
 
   .form-container {
     margin: 0; /* Ocupar todo el ancho */
-    max-width: 100%;
+    max-width: 100%; /* Ajusta al 100% el ancho */
     padding: 20px 15px; /* Ajustar padding horizontal */
     border-radius: 0; /* Quitar bordes redondeados */
     box-shadow: none; /* Quitar sombra */
-    border: none;
+    border: none; /* Quitar borde */
   }
 
   #title {
@@ -254,6 +224,10 @@ textarea:focus:invalid {
 
   .radio-label,
   .checkbox-label {
-    padding-left: 1.2rem; /* Ajustar padding si se personalizan inputs */
+    padding-left: 1.2rem; /* Espacio entre el box y el icono */
+  }
+
+  .checkbox-label-confirmation {
+    padding-left: 0.5rem; /* Espacio entre el box y el icono */
   }
 }
